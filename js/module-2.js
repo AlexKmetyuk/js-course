@@ -164,35 +164,134 @@
 
 // Напишіть функцію, яка буде виводити у консоль 'Hello Javascript'
 
+// function sayHello() {
+//   console.log("Hello Javascript!");
+// }
+
+// sayHello();
+
 // ----------------- //
 
 // Напишіть функцію, яка буде приймати в якості аргументів ім'я та прізвище та повертати повне ім'я.
 
+// function getFullName(firstName, secondName) {
+//   const fullName = `${firstName} ${secondName}`;
+
+//   return fullName;
+// }
+
+// const fullName = getFullName("Max", "Brown");
+
+// console.log(fullName);
 // ----------------- //
 
 // Напишіть функцію, яка буде приймати в якості аргументів два числа та повертати їх суму
+
+// function getSum(firstNumber, secondNumber) {
+//   const sum = firstNumber + secondNumber;
+//   return sum;
+// }
+
+// console.log(getSum(10, 5));
+// console.log(getSum(20, 45));
 
 // ----------------- //
 
 // Напишіть функцію, яка буде приймати в якості аргументів масив чисел та цифру
 // Повернути масив чисел, які ділятсья на цифру з аргументів функції
 
+// function createNewArr(numbersArr, number) {
+//   const newNumbersArr = [];
+
+//   for (const numberItem of numbersArr) {
+//     if (numberItem % number === 0) {
+//       newNumbersArr.push(numberItem);
+//     }
+//   }
+
+//   return newNumbersArr;
+// }
+
+// console.log(createNewArr([1, 2, 3, 4, 5, 6, 7, 8], 2));
+// console.log(createNewArr([4, 2, 5, 7, 8, 4, 5, 3], 3));
+
 // ----------------- //
 
 // Напишіть функцію, яка буде приймати в якості аргументів довільну кількість строк та повертатиме рядок з цих строк
 
+// function createString() {
+//   const argsArr = Array.from(arguments);
+
+//   const string = argsArr.join(" ");
+
+//   return string;
+// }
+
+// console.log(createString("Alex", "Polu", "Ajax", "black"));
 // ----------------- //
 
 // Напишіть функцію, яка буде приймати в якості аргументів довільну килькість чисел та повертати їх суму
+// function sum() {
+//   const argsArr = Array.from(arguments);
+
+//   let totalSum = 0;
+
+//   for (const number of argsArr) {
+//     totalSum += number;
+//   }
+
+//   return totalSum;
+// }
+
+// console.log(sum(1, 2, 3, 4, 5));
 
 // ----------------- //
 
 // Напишіть функцію, яка буде приймати в якості аргумента кількість хвилин та поверніть їх у форматі години:хвилини / 00:00
+// function getTime(mins) {
+//   const hours = Math.floor(mins / 60);
+//   const minutes = mins % 60;
 
+//   const fullHours = hours < 10 ? "0" + hours : hours;
+//   const fullMinutes = minutes < 10 ? "0" + minutes : minutes;
+
+//   console.log(`${fullHours}:${fullMinutes}`);
+// }
+
+// getTime(305);
+// getTime(450);
+// getTime(124125152);
 // ----------------- //
 
 // Напишіть функцію, яка буде приймати в якості аргументів баланс та суму коштів які хочуть зняти, виведіть результат у консоль
 
-// ----------------- //
+// function cashMachine(balance, cash) {
+//   const cashLeft = balance - cash;
 
-// Розібратись зі стеком викликів функцій
+//   if (cashLeft => 0) {
+//     console.log(`Ви зняли ${cash}, залишилось ${cashLeft}`);
+//   } else {
+//     console.log("Недостатньо коштів");
+//   }
+
+// }
+
+// cashMacines(5000, 500)
+
+//  -------------
+
+// let balance = 5000;
+
+// function cashMachine(cash) {
+//   if (balance >= cash) {
+//     balance = balance - cash;
+//     console.log(`Ви зняли ${cash}, залишилось ${balance}`);
+//   } else {
+//     console.log("Недостатньо коштів");
+//   }
+// }
+
+// cashMachine(500);
+// cashMachine(1000);
+// cashMachine(300);
+// ----------------- //
