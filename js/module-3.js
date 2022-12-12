@@ -208,3 +208,163 @@
 // users.addUser("Ivanq323523", "qsfeg2e32532");
 
 // console.log(users.getAllUsers());
+
+// UNIT - 2
+// ----------------- //
+
+// Написати функцію, яка буде повертати копію масива за значенням
+
+// const arr1 = [1, 2, 3, 4, 5];
+
+// function copyArray(array) {
+//   const newArr = [...array];
+
+//   return newArr;
+// }
+
+// const newArr = copyArray(arr1);
+
+// console.log(newArr);
+// ----------------- //
+
+// Написати функцію, яка буде склеювати два масиви не використовуючи сoncat()
+// function concat(arr1, arr2) {
+//   const newArr = [...arr1, ...arr2];
+
+//   return newArr;
+// }
+
+// console.log(concat([1, 2, 3], [5, 2, 3]));
+// ----------------- //
+
+// Написати функцію, яка буде приймати будь-яку кількість аргументів та вивести їх у консоль
+// не використовуючи псевдомасив arguments
+// function logArgs(...args) {
+//   for (const arg of args) {
+//     console.log(arg);
+//   }
+// }
+
+// logArgs(1, 2, "adadg", false, null);
+// ----------------- //
+
+// Написати функцію, яка буде приймати будь-яку кількість чисел та повертати їх суму
+// function sumNumbers(...numbers) {
+//   let totalSum = 0;
+
+//   for (const num of numbers) {
+//     totalSum += num;
+//   }
+
+//   return totalSum;
+// }
+
+// const sum = sumNumbers(1, 5, 6, 3, 5, 7, 3, 6, 3, 5);
+
+// console.log(sum);
+// ----------------- //
+
+//  Написати функцію, яка буде приймати будь яку кількість масивів та склеювати їх в один
+// function concat(...arrays) {
+//   const newArr = [].concat(...arrays);
+
+//   return newArr;
+// }
+
+// const newArr = concat([1, 2, 3], [3, 5, 3], [9, 3, 2]);
+
+// console.log(newArr);
+// ----------------- //
+//TODO Виористовувати деструктурізацію у всіх задачах нижче
+
+// const user = { firsName: "Max", secondName: "Brown", age: 22 },
+// Запишіть відповідні значення у змінні firstName, lastNAme, age
+// Зробіть так, якщо деяких значень немає, запишіть туда значенння за замовчуванням
+// const user = { firstName: "Name", secondName: "Brown", age: 22 };
+
+// const { firstName = "Anonim", secondName, age = "?" } = user;
+
+// console.log(firstName, secondName, age);
+
+// user.firstName = "new Name";
+
+// console.log(user);
+// ----------------- //
+
+// const users = [
+//   { firsName: "Max", secondName: "Brown", age: 22 },
+//   { firsName: "Alex", secondName: "Green", age: 45 },
+//   { firsName: "Mango", secondName: "Yellow", age: 31 },
+//   { firsName: "", secondName: "Yellow", age: '' }
+// ];
+
+// Написати функцію, яка приймає в себе масив користувачів та виведе по черзі їх дані у консоль
+// !!!Використати деструктурізацію!!!
+
+// const users = [
+//   { firstName: "Max", secondName: "Brown", age: 22 },
+//   { firstName: "Alex", secondName: "Green", age: 45 },
+//   { firstName: "Mango", secondName: "Yellow", age: 31 },
+//   { secondName: "Yellow" },
+// ];
+
+// function logUser(userArray) {
+//   for (const user of userArray) {
+//     const { firstName = "Name", secondName = "Last name", age = "?" } = user;
+
+//     console.log(`${firstName} ${secondName}, ${age}`);
+//   }
+// }
+
+// logUser(users);
+// ----------------- //
+
+// const numArr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// Є масив. Запишіть перший елемент цього масиву у змінну elem1,
+// другий - у змінну elem2, третій - у змінну elem3, інші елементи масиву - у змінну otherElements.
+// !!!Використати деструктурізацію!!!
+
+// Запишіть другий елемент цього масиву у змінну elem2. Перший елемент записувати не треба
+
+// const [elem1, elem2, elem3, ...otherElements] = numArr;
+
+// console.log(elem1, elem2, elem3);
+// console.log(otherElements);
+
+// const [, elem2, elem3, ...otherElements] = numArr;
+
+// console.log(elem2);
+// console.log(otherElements);
+
+// ----------------- //
+
+// const obj = {
+//   a: 1,
+//   b: 2,
+//   c: 3,
+//   d: 4,
+// };
+
+// Написати функцію, яка приймає в себе об'єкт, та буде по черзі виводити у консоль ключ : значення
+
+// function logObject(obj) {
+//   for (const [key, value] of Object.entries(obj)) {
+//     console.log(`${key} : ${value}`);
+//   }
+// }
+
+// logObject(obj);
+
+// ----------- //
+
+// function logUser({ name, lastName, age, stat: { likes, views, comments } }) {
+//   const [comment1, comment2, comment3] = comments;
+//   console.log(`${name} ${lastName} ${age}`);
+//   console.log(`User stat: Views: ${views}, Likes: ${likes}`);
+
+//   console.log(comment1);
+//   console.log(comment2);
+//   console.log(comment3);
+// }
+
+// logUser(user);
