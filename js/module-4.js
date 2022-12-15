@@ -115,7 +115,7 @@
 // Створити новий масив та піднести кожне исло до квадрата
 // Знайти суму всіх чисел
 
-const newArr = [];
+// const newArr = [];
 
 // numbers.forEach((number) => {
 //   newArr.push(number ** 2);
@@ -312,3 +312,137 @@ const newArr = [];
 // numbers.forEach(addFive);
 
 // ----------------- //
+
+// UNIT - 2
+// ----------------- //
+
+// const numbers = [1, 2, 3, 4, 5]
+// Створити новий масив де всі числа будуть піднесені до квадрата
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// const newNumbers = numbers.map((num) => num * num);
+
+// console.log(numbers);
+// console.log(newNumbers);
+
+// ----------------- //
+// const users = [
+//   { name: "Max", age: 18 },
+//   { name: "Poly", age: 22 },
+//   { name: "Alex", age: 17 },
+//   { name: "John", age: 33 },
+// ];
+
+// Ствоорити масив імен користувачів
+// Cтворити масив де будуть тільки повнолітні користувачі
+// Перевірити чи всі користувачі повнолітіні
+// Перевірити чи хоча б один користувач повнолітній
+// const names = users.map(({ name }) => name);
+// console.log(names);
+
+// const moreThen18 = users.filter(({ age }) => age >= 18);
+// console.log(moreThen18);
+
+// const isAllMoreThen18 = users.every((user) => user.age >= 18);
+// console.log(isAllMoreThen18);
+
+// const isOneMoreThen18 = users.some((user) => user.age >= 18);
+// console.log(isOneMoreThen18);
+
+// ----------------- //
+
+// const numbers = [11, 10, 22, 29, 31, 2, 4, 7, 8, 12]
+// Створти масив тільки парних чисел
+
+// const even = numbers.filter((num) => !(num % 2));
+
+// console.log(even);
+// ----------------- //
+
+// const strings = ['car', 'alex', 'javascript', 'php', 'node.js', 'react', 'react-native']
+// Створити масив, де всі строки будуть більше 5 символів
+// const newStrings = strings.filter((string) => string.length > 5);
+
+// console.log(newStrings);
+// ----------------- //
+
+// const blend = [1, 2, [3, 4], 5, [6, 7], 10, [1, 2, 3]];
+// Є масив чисел і підмасивів
+// Створити новий масив який буде містити тільки підмасиви
+
+// const onlyArr = blend.filter((item) => Array.isArray(item));
+
+// console.log(onlyArr);
+// ----------------- //
+
+// const numbers = [1, 2, -3, -4, 5, -10, -22, 6, 8];
+// Порахувати кільуість від'ємних чисел масиву
+// const count = numbers.reduce((total, item) => {
+//   if (item < 0) {
+//     total += 1;
+//   }
+
+//   return total;
+// }, 0);
+
+// console.log(count);
+// ----------------- //
+
+// const numbers = [11, 10, 22, 29, 31, 2, 4, 7, 8, 12]
+// Порахувати суму чисел масиву за допомогою reduce()
+
+// ----------------- //
+
+// const users = [
+//   { name: "Max", age: 18 },
+//   { name: "Poly", age: 22 },
+//   { name: "Alex", age: 17 },
+//   { name: "John", age: 33 },
+// ];
+// Створити масив імен лише повнолітніх користувачів
+
+// const names = users.reduce((newArr, user) => {
+//   if (user.age >= 18) {
+//     newArr.push(user.name);
+//   }
+
+//   return newArr;
+// }, []);
+
+// console.log(names);
+
+// ----------------- //
+
+// const wizards = [
+//   {
+//     name: "Harry Potter",
+//     house: "Gryfindor",
+//   },
+//   {
+//     name: "Cedric Diggory",
+//     house: "Hufflepuff",
+//   },
+//   {
+//     name: "Tonks",
+//     house: "Hufflepuff",
+//   },
+//   {
+//     name: "Ronald Weasley",
+//     house: "Gryfindor",
+//   },
+//   {
+//     name: "Hermione Granger",
+//     house: "Gryfindor",
+//   },
+// ];
+
+// const points = {
+//   "Harry Potter": 500,
+//   "Cedric Diggory": 750,
+//   "Ronald Weasley": 100,
+//   "Hermione Granger": 1270,
+// };
+
+// Створити масив, який буде міститит тільки магів з Gryfindor
+// Об'єднати масив wizards та об'єкт points
