@@ -1,31 +1,43 @@
-// Створити метод об'єкта, який буде продавати одну машину
-// Створити функцію реєстрації яка буде приймати ім'я, прізвище так функцію-колбек яка буде виконуватись після рєєстрації клієнта
-// Зареєструвати клієнта та продати одну машину
+// Створити клас Worker, який буде приймати ім'я, прізвище, зарплату та бонус
+// Створити класс FrontEndDeveloper який буде наслідувати клас Worker
+// Додати до класу FrontEndDeveloper властивість rating
 
-const car = {
-  brand: "Renault",
-  model: "Megane",
-  number: 10,
+// class Worker {
+//   constructor(name, surname, salary, bonus) {
+//     this.name = name;
+//     this.surname = surname;
+//     this.salary = salary;
+//     this.bonus = bonus;
+//   }
 
-  sellCar() {
-    this.number -= 1;
+//   getFullSalary() {
+//     return this.salary + this.bonus;
+//   }
+// }
 
-    console.log("One car are sold!");
-  },
-};
+// class FrontEndDeveloper extends Worker {
+//   rating;
+//   constructor(name, surname, salary, bonus, rating) {
+//     super(name, surname, salary, bonus);
 
-// console.log(car);
+//     this.rating = rating;
+//   }
 
-// car.sellCar();
+//   set rating(newRat) {
+//     this.rating = newRat;
+//   }
 
-// console.log(car);
+//   get rating() {
+//     return this.rating;
+//   }
+// }
 
-function registration(firstName, lastName, callback) {
-  console.log(`${firstName} ${lastName} are registered!`);
+// const max = new FrontEndDeveloper("Max", "Brown", 800, 100, 9.1);
 
-  callback();
-}
+// console.log(max.getFullSalary());
+// max.rating = 10;
+// console.log(max.rating);
 
-registration("Max", "Brown", car.sellCar.bind(car));
+// const alex = new Worker("Alex", "Red", 200, 10);
 
-console.log(car);
+// console.log(alex.getRating());
