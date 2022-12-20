@@ -1,43 +1,31 @@
-// Створити клас Worker, який буде приймати ім'я, прізвище, зарплату та бонус
-// Створити класс FrontEndDeveloper який буде наслідувати клас Worker
-// Додати до класу FrontEndDeveloper властивість rating
+// Створити розмітку списка користувачів.
+// Якщо у користувача немає аватара, дати йому стандартний аватар
 
-// class Worker {
-//   constructor(name, surname, salary, bonus) {
-//     this.name = name;
-//     this.surname = surname;
-//     this.salary = salary;
-//     this.bonus = bonus;
-//   }
+const defaultAvatar =
+  "https://w7.pngwing.com/pngs/981/645/png-transparent-default-profile-united-states-computer-icons-desktop-free-high-quality-person-icon-miscellaneous-silhouette-symbol-thumbnail.png";
 
-//   getFullSalary() {
-//     return this.salary + this.bonus;
-//   }
-// }
+const users = [
+  {
+    name: "Alex",
+    avatar:
+      "https://i.pinimg.com/736x/21/20/b0/2120b058cb9946e36306778243eadae5.jpg",
+  },
+  {
+    name: "Max",
+  },
+  {
+    name: "Poly",
+    avatar:
+      "https://i.pinimg.com/736x/21/20/b0/2120b058cb9946e36306778243eadae5.jpg",
+  },
+];
 
-// class FrontEndDeveloper extends Worker {
-//   rating;
-//   constructor(name, surname, salary, bonus, rating) {
-//     super(name, surname, salary, bonus);
+const list = document.querySelector(".users-list");
 
-//     this.rating = rating;
-//   }
+users.forEach((user) => {
+  const markup = `<li><img width="100" src="${
+    user.avatar || defaultAvatar
+  }" alt="Avatar"/><p>${user.name}</p></li>`;
 
-//   set rating(newRat) {
-//     this.rating = newRat;
-//   }
-
-//   get rating() {
-//     return this.rating;
-//   }
-// }
-
-// const max = new FrontEndDeveloper("Max", "Brown", 800, 100, 9.1);
-
-// console.log(max.getFullSalary());
-// max.rating = 10;
-// console.log(max.rating);
-
-// const alex = new Worker("Alex", "Red", 200, 10);
-
-// console.log(alex.getRating());
+  list.insertAdjacentHTML("beforeend", markup);
+});
