@@ -133,24 +133,66 @@
 
 // ----------------- //
 
+// UNIT - 2
+
 // Here is a sample html file with a submit button. Now modify the style of the paragraph text through javascript code.
 // Sample HTML file :
 
-// <p id ='text'>JavaScript Exercises - w3resource</p>
+// <p class="text">JavaScript Exercises - w3resource</p>
 // <div>
-// <button id="jsstyle"
-// onclick="js_style()">Style</button>
+// <button class="style-btn"
+// onclick="">Style</button>
 // </div>
 
 // Clicking on the button the font, font size, and color of the paragraph text will be changed.
 
+// const button = document.querySelector(".style-btn");
+// const text = document.querySelector(".text");
+
+// button.addEventListener("click", () => {
+//   text.style.backgroundColor = "red";
+//   text.style.fontSize = "30px";
+// });
+
 // ----------------- //
 
-// Write a JavaScript function to get the values of First and Last name of the following form. Go to the editor
+// Write a JavaScript function to get the values of First and Last name of the following form.
 // Sample HTML file :
 
-// <form id="form1" onsubmit="getFormvalue(event)">
+// <form id="form1">
 // First name: <input class="name-input" type="text" value="David"><br>
 // Last name: <input class="surname-input" type="text" value="Beckham"><br>
 // <input type="submit" value="Submit">
 // </form>
+
+// const button = document.querySelector(".submit-btn");
+// const nameInput = document.querySelector(".name-input");
+// const lastNameInput = document.querySelector(".surname-input");
+
+// button.addEventListener("click", (event) => {
+//   event.preventDefault();
+
+//   console.log(nameInput.value, lastNameInput.value);
+
+//   nameInput.value = "";
+//   lastNameInput.value = "";
+// });
+
+// ----------------- //
+
+// Написати код, який буде брати username із input та записувати його в users-list
+
+//  <div>
+//   <form>
+//     <input class="username-input" type="text" placeholder="username" />
+//     <input class="submit-btn" type="button" value="Submit" />
+//   </form>
+//   <ul class="users-list"></ul>
+// </div>
+
+// ----------------- //
+
+// Написати код який буде виводити в консоль ширину і висоту window кожен раз коли window змінюж розміри
+// window.addEventListener("resize", () => {
+//   console.log("Width:", window.innerWidth, "Height:", window.innerHeight);
+// });
