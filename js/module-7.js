@@ -173,3 +173,150 @@
 //   }
 // });
 // ----------------- //
+
+// UNIT - 2
+// ----------------- //
+
+// Є список з одного числа.
+// 1. Скопіювати елемент списка 5 раз
+// 2. Скопіювати елемент списка 5 раз та записати в нього числа від 1 до 5
+// const num = document.querySelector(".num");
+// const list = document.querySelector(".numbers");
+
+// for (let i = 1; i <= 5; i++) {
+//   const newNum = num.cloneNode(false);
+//   newNum.textContent = i;
+//   list.append(newNum);
+// }
+
+// console.log(list);
+
+// ----------------- //
+
+// Записувати значення із input в output
+// Звичайним способом
+// За допомогою throttle
+// За допомогою debounce
+
+// <label for="">
+//   Enter value:
+//   <input class="input" type="text" />
+// </label>
+// <p class="output-default">Default:</p>
+// <p class="output-throttle">Throttle:</p>
+// <p class="output-debounce">Debounce:</p>
+
+// Записувати значення із input в output
+// Звичайним способом
+// За допомогою throttle
+// За допомогою debounce
+
+// const input = document.querySelector(".input");
+
+// const defaultOut = document.querySelector(".output-default");
+// const throttleOut = document.querySelector(".output-throttle");
+// const debounceOut = document.querySelector(".output-debounce");
+
+// input.addEventListener("input", (e) => {
+//   defaultOut.textContent = "Default: " + input.value;
+// });
+
+// input.addEventListener(
+//   "input",
+//   _.throttle((e) => {
+//     throttleOut.textContent = "Throttle: " + input.value;
+//   }, 500)
+// );
+
+// input.addEventListener(
+//   "input",
+//   _.debounce(
+//     (e) => {
+//       debounceOut.textContent = "Debounce: " + input.value;
+//     },
+//     500,
+//     { trailing: false, leading: true }
+//   )
+// );
+
+// ----------------- //
+
+// Написати скрипт, для створення списку справ
+// Справи можна видаляти та відмічати виконано/не виконано
+
+// Для кнопки видалення - ╳
+
+// <form>
+//   <label>Add todo: </label><input type="text" /><button class="add-btn">
+//     Add to list
+//   </button>
+// </form>
+
+// <ul class="todos"></ul>
+
+// <style>
+//   .todo {
+//     display: flex;
+//     border: 1px solid black;
+//     width: 200px;
+//     border-radius: 20px;
+//     padding-left: 20px;
+//     cursor: pointer;
+//     margin-bottom: 10px;
+//   }
+
+//   .todo.checked {
+//     background: rgba(2, 193, 2, 0.5);
+//   }
+
+//   .delete-btn {
+//     margin-left: auto;
+//     border-radius: 50%;
+//     cursor: pointer;
+//   }
+// </style>
+
+// const todosList = document.querySelector(".todos");
+// const btn = document.querySelector(".add-btn");
+// const input = document.querySelector(".input");
+
+// btn.addEventListener("click", (e) => {
+//   e.preventDefault();
+
+//   if (!input.value) return;
+
+//   createTodo(input.value);
+//   input.value = "";
+// });
+
+// function createTodo(text) {
+//   const item = document.createElement("li");
+//   item.classList.add("todo");
+
+//   const textEl = document.createElement("p");
+//   textEl.textContent = text;
+
+//   item.append(textEl);
+//   const deleteBtn = document.createElement("button");
+//   deleteBtn.classList.add("delete-btn");
+//   deleteBtn.textContent = "╳";
+//   item.append(deleteBtn);
+
+//   todosList.append(item);
+// }
+
+// todosList.addEventListener("click", (e) => {
+//   console.log(e.target);
+
+//   if (e.target.classList.contains("delete-btn")) {
+//     e.target.parentNode.remove();
+//   }
+
+//   if (e.target.classList.contains("todo")) {
+//     if (e.target.classList.contains("checked")) {
+//       e.target.classList.remove("checked");
+//     } else {
+//       e.target.classList.add("checked");
+//     }
+//   }
+// });
