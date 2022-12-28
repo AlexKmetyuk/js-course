@@ -1,53 +1,78 @@
-// Написати скрипт, для створення списку справ
-// Справи можна видаляти та відмічати виконано/не виконано
+// Написати скрипт який додає продукт в корзину
+// Наповнення корзини має зберігатись в localStorage
 
-// Для кнопки видалення - ╳
+// const productList = document.querySelector(".list");
+// const cartList = document.querySelector(".cart-list");
+// const cartTotalPrice = document.querySelector(".total-price");
+// const clearBtn = document.querySelector(".clear-btn");
 
-// const todosList = document.querySelector(".todos");
-// const btn = document.querySelector(".add-btn");
-// const input = document.querySelector(".input");
+// const cart = JSON.parse(localStorage.getItem("cart")) || [];
+// if (cart.length !== 0) {
+//   generateCart();
+// }
+// // const product = {
+// //   name: "name",
+// //   price: "1000",
+// //   count: 2,
+// // };
 
-// btn.addEventListener("click", (e) => {
-//   e.preventDefault();
+// productList.addEventListener("click", (e) => {
+//   if (e.target.classList.contains("add-btn")) {
+//     const card = e.target.parentNode;
+//     const name = card.querySelector(".title").textContent;
+//     const price = card.querySelector(".price").textContent;
+//     const product = {
+//       name,
+//       price,
+//       count: 1,
+//     };
 
-//   if (!input.value) return;
+//     if (cart.length === 0) {
+//       cart.push(product);
+//       generateCart();
 
-//   createTodo(input.value);
-//   input.value = "";
+//       return;
+//     }
+
+//     const productIndex = cart.map((item) => item.name).indexOf(name);
+//     if (productIndex === -1) {
+//       cart.push(product);
+//     } else {
+//       cart[productIndex].count += 1;
+//     }
+
+//     generateCart();
+//   }
 // });
 
-// function createTodo(text) {
-//   const item = document.createElement("li");
-//   item.classList.add("todo");
+// function generateCart() {
+//   saveCartToStorage();
+//   cartList.innerHTML = "";
+//   let total = 0;
+//   cart.forEach((product) => {
+//     const productEl = `<li><p>${product.name}</p><p>Price: ${
+//       product.price
+//     }</p><p>Count: ${product.count}</p><p>Total: ${
+//       product.price * product.count
+//     }</p></li>`;
 
-//   const textEl = document.createElement("p");
-//   textEl.textContent = text;
+//     console.log(productEl);
+//     cartList.innerHTML += productEl;
+//     total += product.price * product.count;
+//   });
 
-//   item.append(textEl);
-//   const deleteBtn = document.createElement("button");
-//   deleteBtn.classList.add("delete-btn");
-//   deleteBtn.textContent = "╳";
-//   item.append(deleteBtn);
-
-//   todosList.append(item);
+//   cartTotalPrice.textContent = "Total price: " + total;
 // }
 
-// todosList.addEventListener("click", (e) => {
-//   if (e.target === e.currentTarget) {
-//     console.log(true);
-//     return;
-//   }
-//   console.log(e.target);
+// function saveCartToStorage() {
+//   localStorage.setItem("cart", JSON.stringify(cart));
+// }
 
-//   if (e.target.classList.contains("delete-btn")) {
-//     e.target.parentNode.remove();
-//   }
+// function clearCart() {
+//   localStorage.removeItem("cart");
+//   cartList.innerHTML = "";
+//   cart.length = 0;
+//   cartTotalPrice.textContent = "Total price: 0";
+// }
 
-//   if (e.target.classList.contains("todo")) {
-//     if (e.target.classList.contains("checked")) {
-//       e.target.classList.remove("checked");
-//     } else {
-//       e.target.classList.add("checked");
-//     }
-//   }
-// });
+// clearBtn.addEventListener("click", clearCart);

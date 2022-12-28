@@ -6,20 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/styles.css" />
 
-    <title>Document</title>
+    <title>js_course</title>
   </head>
+
+  <style>
+    ul {
+      display: flex;
+      list-style: none;
+    }
+
+    li {
+      margin-left: 10px;
+      border: 1px solid black;
+      padding: 5px;
+    }
+
+    .cart {
+      border: 1px solid black;
+      padding: 10px;
+    }
+  </style>
 
   <body>
     <h1>JS-COURSE</h1>
-    <h2>MODULE - 7 / UNIT - 2</h2>
+    <h2>MODULE - 8 / UNIT - 2</h2>
 
-    <ul>
-      <li></li>
-      <li></li>
-      <li></li>
+    <ul class="list">
+      <li class="item">
+        <h3 class="title">Item 1</h3>
+        <img
+          src="http://placeimg.com/150/200/tech"
+          alt="#"
+          width="150"
+          height="200"
+        />
+        <p>Price: <span class="price">1500</span></p>
+        <button class="add-btn">Add to cart</button>
+      </li>
+      <li class="item">
+        <h3 class="title">Item 2</h3>
+        <img
+          src="http://placeimg.com/150/200/nature"
+          alt="#"
+          width="150"
+          height="200"
+        />
+        <p>Price: <span class="price">500</span></p>
+        <button class="add-btn">Add to cart</button>
+      </li>
+      <li class="item">
+        <h3 class="title">Item 3</h3>
+        <img
+          src="http://placeimg.com/150/200/arch"
+          alt="#"
+          width="150"
+          height="200"
+        />
+        <p>Price: <span class="price">2000</span></p>
+        <button class="add-btn">Add to cart</button>
+      </li>
     </ul>
 
-    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <div class="cart">
+      <ul class="cart-list"></ul>
+      <p class="total-price">Total price: 0</p>
+      <button class="clear-btn">Clear cart</button>
+    </div>
+
     <script src="./js/script.js"></script>
   </body>
 </html>
