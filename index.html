@@ -10,68 +10,37 @@
   </head>
 
   <style>
-    ul {
+    .timer__items {
       display: flex;
-      list-style: none;
+      font-size: 48px;
     }
-
-    li {
+    .timer__item {
+      position: relative;
+      min-width: 60px;
       margin-left: 10px;
-      border: 1px solid black;
-      padding: 5px;
+      margin-right: 10px;
+      padding-bottom: 15px;
+      text-align: center;
     }
-
-    .cart {
-      border: 1px solid black;
-      padding: 10px;
+    .timer__item::before {
+      content: attr(data-title);
+      display: block;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      font-size: 14px;
+    }
+    .timer__item:not(:last-child)::after {
+      content: ":";
+      position: absolute;
+      right: -15px;
     }
   </style>
 
   <body>
     <h1>JS-COURSE</h1>
-    <h2>MODULE - 8 / UNIT - 2</h2>
-
-    <ul class="list">
-      <li class="item">
-        <h3 class="title">Item 1</h3>
-        <img
-          src="http://placeimg.com/150/200/tech"
-          alt="#"
-          width="150"
-          height="200"
-        />
-        <p>Price: <span class="price">1500</span></p>
-        <button class="add-btn">Add to cart</button>
-      </li>
-      <li class="item">
-        <h3 class="title">Item 2</h3>
-        <img
-          src="http://placeimg.com/150/200/nature"
-          alt="#"
-          width="150"
-          height="200"
-        />
-        <p>Price: <span class="price">500</span></p>
-        <button class="add-btn">Add to cart</button>
-      </li>
-      <li class="item">
-        <h3 class="title">Item 3</h3>
-        <img
-          src="http://placeimg.com/150/200/arch"
-          alt="#"
-          width="150"
-          height="200"
-        />
-        <p>Price: <span class="price">2000</span></p>
-        <button class="add-btn">Add to cart</button>
-      </li>
-    </ul>
-
-    <div class="cart">
-      <ul class="cart-list"></ul>
-      <p class="total-price">Total price: 0</p>
-      <button class="clear-btn">Clear cart</button>
-    </div>
+    <h2>MODULE - 9 / UNIT - 1</h2>
 
     <script src="./js/script.js"></script>
   </body>
