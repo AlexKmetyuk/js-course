@@ -5,42 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/styles.css" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.5.0/pagination.min.css"
+      integrity="sha512-K1k7jSn9RDKEcn/ugqVVvWYu0bcS3q1w6m/5pQSnrj0bCfIqF6Wk49lkmckSb4wglvTP9V17LtS0q0XxYccXbg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>js_course</title>
   </head>
 
   <style>
-    .timer__items {
+    ul {
+      list-style: none;
       display: flex;
-      font-size: 48px;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
     }
-    .timer__item {
-      position: relative;
-      min-width: 60px;
-      margin-left: 10px;
-      margin-right: 10px;
-      padding-bottom: 15px;
+    ul li {
+      width: 200px;
       text-align: center;
+      border: 1px solid black;
+      margin: 2px;
+      padding: 0;
     }
-    .timer__item::before {
-      content: attr(data-title);
-      display: block;
-      position: absolute;
-      left: 50%;
-      bottom: 0;
-      transform: translateX(-50%);
-      font-size: 14px;
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-family: Arial, Helvetica, sans-serif;
     }
-    .timer__item:not(:last-child)::after {
-      content: ":";
-      position: absolute;
-      right: -15px;
+
+    .hidden {
+      display: none;
     }
   </style>
 
   <body>
     <h1>JS-COURSE</h1>
     <h2>MODULE - 9 / UNIT - 2</h2>
+    <input type="text" /><button class="search-btn">SEARCH</button>
+    <ul class="news"></ul>
+    <button class="load-btn hidden">LOAD MORE</button>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.2/axios.min.js"
+      integrity="sha512-QTnb9BQkG4fBYIt9JGvYmxPpd6TBeKp6lsUrtiVQsrJ9sb33Bn9s0wMQO9qVBFbPX3xHRAsBHvXlcsrnJjExjg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
     <script src="./js/script.js"></script>
   </body>
